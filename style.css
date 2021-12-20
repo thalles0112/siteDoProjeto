@@ -36,6 +36,17 @@ img {
     width: 100%;
 }
 
+.topico-texto {
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 25%;
+    margin-right: 25%;
+    text-align: justify;
+    
+}
+
+
 #titulo {
     display: flex;
     align-items: center;
