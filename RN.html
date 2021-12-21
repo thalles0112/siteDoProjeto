@@ -38,8 +38,9 @@
 
     </div>
     <div class='topico-texto'>
+        
         <p>
-            A Tecnologia de machine learning que usa de redes neurais para encontrar padrões em imagens e "adivinhar" o que tem em uma imagem nunca antes vista durante o treinamento da mesma
+            Redes Neurais são Tecnologias do ramo de machine learning que podem ser usadas para computadores aprender padrões em imagens ou qualquer outro tipo de dado e "adivinhar" o que tem em uma imagem ou em qualquer outro arquivo que ela tenha treinado. Existem inúmeras aplicações que podem ser feitas com esse tipo de inteligência artificial. Isso inclui atividades como descobrir a formula de conversão de milhas para kilômetros até identificar câncer em exames.
         </p>
     </div>
 
@@ -53,7 +54,7 @@
 
     <div class='topico-texto'>
         <p>
-            Existem muitas outras redes neurais, mas para nosso projeto até agora eu testei essas duas, sendo que o ideal é a Conv3D e antes de explicar o motivo, eu vou explicar a Conv2D antes.
+            Existem muitos outros modelos de redes neurais, mas para nosso projeto, até agora, eu testei apenas essas duas, sendo que o ideal é seria uma rede Convolucional 3D. Antes de explicar o motivo, eu vou explicar o Funcionamento da rede Convolucional 2D.
         </p>
        
     </div>
@@ -72,7 +73,7 @@
             Redes Convolucionais são redes de neurônios artificiais baseados na biologia responsável pela visão dos animais, elas são usadas principalmente em <strong> processamento de imagens/videos</strong> e suas aplicações são inúmeras.
         </p>
         <p>
-            Considerando que nosso projeto será um tradutor de libras e que libras são <strong>movimentos</strong> ao longo do <strong>tempo</strong> com a mão, não poderemos usar esse tipo de rede neural. Isso porque ela deixa de considerar a dimensão do tempo, esse tipo de rede só processa as dimensões espaciais de uma imagem, ou seja, a altura e largura. Para podermos ensinar uma rede neural entender o espaço tempo e, portanto, a variação da pose da mão ao longo do tempo, precisaremos usar a Conv3D.
+            Considerando que nosso projeto será um tradutor de libras e que libras são <strong>movimentos</strong> ao longo do <strong>tempo</strong> com a mão, não poderemos usar esse tipo de rede neural (Conv2D). Isso porque ela deixa de considerar a dimensão do tempo, esse tipo de rede só leva em conta as dimensões espaciais de uma imagem, ou seja, a altura e largura. Para podermos ensinar uma rede neural entender o espaço tempo e, portanto, a variação da pose da mão ao longo do tempo, precisaremos usar a Conv3D.
         </p>
        
         <div class='code'>
