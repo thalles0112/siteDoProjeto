@@ -55,23 +55,31 @@
         <p>
             Existem muitas outras redes neurais, mas para nosso projeto até agora eu testei essas duas, sendo que o ideal é a Conv3D e antes de explicar o motivo, eu vou explicar a Conv2D antes.
         </p>
-        <p>
-            Redes Convolucionais são redes de neurônios artificiais baseados na biologia responsável pela visão dos animais, elas são usadas principalmente em <strong> processamento de imagens/videos</strong> e suas aplicações são inúmeras.
-        </p>
-        <p>
-            Considerando que nosso projeto será um tradutor de libras e que libras são <strong>movimentos</strong> ao longo do <strong>tempo</strong> com a mão, não poderemos usar esse tipo de rede neural. Isso porque ela deixa de considerar a dimensão do tempo, esse tipo de rede só processa as dimensões espaciais de uma imagem, ou seja, a altura e largura. Para podermos ensinar uma rede neural entender o espaço tempo e, portanto, a variação da pose da mão ao longo do tempo, precisaremos usar a Conv3D.
-        </p>
-        <p>
-            A diferença entre a <strong>Conv3D</strong> e a <strong>Conv2D</strong> é que a primeira podemos usar uma 3ª dimensão. Além da altura e largura de uma imagem, podemos ter como parâmetro a quatidade de frames (tempo) e considerá-la para o aprendizado
-        </p>
+       
     </div>
 
     <div class="topico">
         <h2>Conv2D</h2>
         <img src="img/exampleCNN1.png" alt="">
         <img src="img/exampleCNN2.png" alt="">
+       
+           
+    </div>
+
+    <div class="topico-texto">
+
+        <p>
+            Redes Convolucionais são redes de neurônios artificiais baseados na biologia responsável pela visão dos animais, elas são usadas principalmente em <strong> processamento de imagens/videos</strong> e suas aplicações são inúmeras.
+        </p>
+        <p>
+            Considerando que nosso projeto será um tradutor de libras e que libras são <strong>movimentos</strong> ao longo do <strong>tempo</strong> com a mão, não poderemos usar esse tipo de rede neural. Isso porque ela deixa de considerar a dimensão do tempo, esse tipo de rede só processa as dimensões espaciais de uma imagem, ou seja, a altura e largura. Para podermos ensinar uma rede neural entender o espaço tempo e, portanto, a variação da pose da mão ao longo do tempo, precisaremos usar a Conv3D.
+        </p>
+       
         <div class='code'>
+
+
             <pre><code>
+    
 net= Sequential(
         [
             layers.Conv2D(32,(3,3),strides=(1,1),activation="relu",input_shape=(300,300,1)),
@@ -89,13 +97,21 @@ metrics=['accuracy'])
 net.fit(x, y, 32, 7)
 
 net.save('modelconv2d')
-            </code></pre>
-        </div>
+  
+        </code></pre>
+    
+    </div>
+
     </div>
 
     <div class="topico">
         <h2>Conv3D</h2>
         <img src="img/exampleCNN3D.png" alt="">
+    </div>
+    <div class="topico-texto">
+        <p>
+            A diferença entre a <strong>Conv3D</strong> e a <strong>Conv2D</strong> é que a primeira podemos usar uma 3ª dimensão. Além da altura e largura de uma imagem, podemos ter como parâmetro a quatidade de frames (tempo) e considerá-la para o aprendizado
+        </p>
     </div>
 
 <footer>
