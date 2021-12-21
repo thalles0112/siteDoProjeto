@@ -70,7 +70,27 @@
         <h2>Conv2D</h2>
         <img src="img/exampleCNN1.png" alt="">
         <img src="img/exampleCNN2.png" alt="">
-        <img src="img/CNN2D.png" alt="">
+        <div class='code'>
+            <pre><code>
+net= Sequential(
+        [
+            layers.Conv2D(32,(3,3),strides=(1,1),activation="relu",input_shape=(300,300,1)),
+            layers.MaxPooling2D(),
+            layers.Flatten(),
+            layers.Dense(64,activation="relu"),
+            layers.Dense(3,activation="softmax")
+        ]
+        )
+net.compile(optimizer='adam',
+loss='SparseCategoricalCrossentropy',
+metrics=['accuracy'])
+
+
+net.fit(x, y, 32, 7)
+
+net.save('modelconv2d')
+            </code></pre>
+        </div>
     </div>
 
     <div class="topico">
