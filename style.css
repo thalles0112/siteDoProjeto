@@ -96,6 +96,7 @@ img {
     color: white
 }
 
+
 .code img {
     width: 100%;
 }
@@ -115,7 +116,7 @@ a {
 footer {
     margin-top: 20px;
     margin-bottom: 0;
-    padding-bottom: 40px;
+    padding-bottom: 10px;
     padding-top: 40px;
     border-top: #000 solid 1px;
     left: 0;
@@ -125,3 +126,21 @@ footer {
     color: white;
     text-align: center;
 }
+
+/* teste */
+
+a[href="#top"]{
+    padding:10px;
+    
+    top: 90%;
+    right:40px;
+}
+a[href="#top"]:hover{
+    text-decoration:none;
+}
+
+
+
+
+
+/* teste */
