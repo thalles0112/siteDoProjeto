@@ -53,8 +53,18 @@ return training_data
     </div>
     <div class='topico-texto'>
         <p>
-            Esta parte do código listará todos os caminhos dos videos presentes na pasta principal e adicionar à cada caminho lido o numero da classe na ordem das pastas descritas. Por exemplo: A função pede a pasta principal e o nome das subpastas. Supondo que foi dados os nomes 'oi', 'boa' e 'tarde', o algorítmo vai atrelar o label 0 à classe 'oi', 1 à classe 'boa', 2 à classe tarde e assim sucetivamente caso houver outras classes.
+            Esta parte do código listará todos os caminhos dos videos presentes na pasta principal e adicionará à cada caminho lido o numero da classe na ordem das pastas descritas. Por exemplo: 
+            
         </p>
+        <p>
+            A função pede a pasta principal e o nome das subpastas. Supondo que foi dados os nomes 'oi', 'boa' e 'tarde', o algorítmo vai atrelar:
+        </p>
+        <ul>
+            <li>Label 0 à classe 'oi'; </li>
+            <li>Label 1 à classe 'boa';</li>
+            <li>Label 2 à classe tarde;</li>
+            <li>E assim por diante caso houvesse mais classes</li>
+        </ul>
         <p>
             Por fim a função retornará uma lista de duas dimensões: caminho completo do video e numero de classe respectiva ao sinal de libras.
         </p>
@@ -70,7 +80,7 @@ return training_data
     </div>
 
     <div class="topico">      
-        <h2 style="text-align: center;">I.I Preprocessamento</h2>
+        <h2 style="text-align: center;">II Preprocessamento</h2>
         <div class='code'>
             <pre><code>
 def processVideoMOD(training_data=list, n_frames=30, size=(300,300)):
@@ -125,7 +135,7 @@ return frames, labels
     </div>
     <div class='topico-texto'>
         <p>
-            Essa parte do projeto é onde os caminhos retornados pela função anterior serão definitivamente lidos, receberão um tratamento especial onde apenas as silhuetas presentes nos videos ficarão aparentes, em outras palavras, os contornos das pessoas ficarão brancos e todo o resto do video ficará preto
+            Essa parte do projeto é onde os caminhos retornados pela função anterior serão definitivamente lidos, receberão um tratamento especial onde apenas as silhuetas presentes nos videos ficarão aparentes. Em outras palavras, os contornos das pessoas ficarão brancos e todo o resto do video ficará preto
         </p>
     </div>
 <footer>
